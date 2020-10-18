@@ -1,0 +1,30 @@
+.login__container
+  .login__container--left
+    .logo__area
+      = image_tag('simpree_logo_2_20200803.png', class: 'logo__image')
+    .text__area  
+      %h2 Welcome back.
+  .login__container--right
+    %h2.login__text 
+      ログイン
+    .login__text__border
+    
+    .form__contents  
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.label :email, class: "name-text"
+          %br/
+          = f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email", class: "text-box"
+        .field
+          = f.label :password, class: "name-text"
+          %br/
+          = f.password_field :password, placeholder: "パスワード", autocomplete: "current-password", class: "text-box"
+        - if devise_mapping.rememberable?
+          .chek-box-field
+            = f.check_box :remember_me
+            = f.label :remember_me, class: "name-text" 
+            ログイン状態を保持する
+        .select-actions
+          = f.submit "ログイン", class: "sign-up-btn"
+          %p /  
+          = render "devise/shared/links"

@@ -1,0 +1,121 @@
+.login__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #424242;
+  background-color: #FFFFFC;
+  padding: 100px 0 30px 0;
+  overflow: scroll;
+  &--left {
+    width: 50%;
+    text-align: center;
+      
+    .logo__image {
+      width: 250px;
+      margin: 50px 0 50px 0;
+      
+    } 
+    .text__area {
+      text-align: center;
+      h2 {
+        font-size: 20px;
+        font-family: Arial Rounded MT Bold;
+        margin-bottom: 30px;
+        line-height: 40px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  &--right {
+    width: 50%;
+    padding-left: 30px;
+    .login__text {
+      font-size: 30px;
+      margin-bottom: 10px;
+      position: relative;
+
+    }
+    .login__text__border {
+      width: 80%;
+      border-bottom: 2px solid #F37D26;
+    }
+    .form__contents  {
+      
+      .field {
+        .text-box {
+          width: 80%;
+          height: 30px;
+          font-size: 12px;
+          padding-left: 10px;
+          background-color: #dedede;
+          border: none;
+          border-radius: 5px;
+          color: #343434;
+          &__third {
+            width: 80%;
+            height: 30px;
+            font-size: 12px;
+            padding-left: 10px;
+            margin-bottom: 30px;
+            background-color: #dedede;
+            border: none;
+            border-radius: 5px;
+          }
+        }
+        .name-text {
+          display: none;
+        }
+      }
+      .chek-box-field {
+        margin: 50px 0 15px;
+        font-size: 12px;
+        .name-text {
+          display: none;
+        }
+      }
+      .select-actions {
+        display: flex;
+        line-height: 30px;
+        .sign-up-btn {
+          font-size: 20px;
+          color: #424242;
+          border: none;
+          background-color: #FFFFFC;
+          cursor: pointer;
+        }
+        & :hover {
+          color: #fba536;
+        }
+        p {
+          margin: 0 10px;
+
+        }
+        .sign-up-link {
+          font-size: 20px;
+          color: #424242;
+          text-decoration: none;
+        }
+        & :hover {
+          color: #fba536;
+        }
+        .forgot-link {
+          font-size: 12px;
+          color: #424242;
+          text-decoration: none;
+          position: absolute;
+          right: 9%;
+          top: 270px;
+          content: none;
+        }
+        & ::after { 
+          content: none;
+        }
+        & :hover {
+          color: #fba536;
+        }
+      }
+    }
+  }
+}
+
+
