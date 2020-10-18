@@ -1,0 +1,18 @@
+%header
+  = render partial: "header"
+
+%main
+  .newPost__container
+    .newPost__container__form
+      = form_with(model: @post, local: true) do |form|
+        = form.label :clip, class: :clipArea do
+          %i.fas.fa-file-video
+          %pクリックしてファイルをアップロード
+          = form.file_field :clip, :accept => 'video/*', class: :clip
+        = form.text_field :title, placeholder: "タイトル", class: :title
+        = form.text_area :text, placeholder: "テキスト", class: :text
+        -# = form.text_field :category, placeholder: "カテゴリー", class: :category
+        %button{type: "submit", class:'send-btn'} 
+          %i.fa.fa-file-import
+        = link_to user_path(current_user.id), class: 'home-btn-link' do
+          %i.fas.fa-home

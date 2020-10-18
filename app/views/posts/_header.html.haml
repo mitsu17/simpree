@@ -1,0 +1,24 @@
+.header__logo
+  = link_to image_tag('simpree_logo_2_20200803.png', class: 'header__logo__image'), user_path(current_user.id)
+
+.seach__menu
+  .header__category
+    = link_to root_path class: 'header__category__icon' do
+      %i.fa.fa-list-alt
+
+  .header__searchBox
+    = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
+      = form.text_field :search, placeholder: "キーワードから探す", class: "search-input"
+      = form.label 'btn', class: 'search-btn-icon' do
+        %i.fa.fa-search
+        = form.submit id: "btn", class: "search-btn" 
+        
+.header__menu
+  - if user_signed_in? 
+    %ul.header__menu__icon
+      %li
+        = link_to destroy_user_session_path, method: :delete, class: 'header__menu__icon__user' do
+          %h3=current_user.nickname
+      %li
+        = link_to new_post_path, class: 'header__menu__icon__video' do
+          %i.fas.fa-plus-circle
