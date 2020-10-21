@@ -1,0 +1,16 @@
+%header
+  = render partial: "header"
+%main
+  .detail__post
+    .detail__post__clip
+      = video_tag(url_for(@post.clip), class: "detail__post__clip__video", controls:'')
+    .detail__post__title
+      = @post.title
+    .detail__post__text
+      = simple_format @post.text
+      = link_to edit_post_path(@post.id) , class: 'transition__btn__edit-btn', method: :get do
+        %i.fa.fa-edit
+      = link_to post_path(@post.id), class: 'transition__btn__delete-btn', method: :delete do
+        %i.fa.fa-trash-alt
+      = link_to user_path(current_user.id) , class: 'home-btn-link' do
+        %i.fas.fa-home

@@ -1,0 +1,7 @@
+.grid__item
+  = link_to video_tag(url_for(post.clip), class: 'grid__item__image'), post_path(post.id), method: :get
+  .grid__item__title
+    %h3= post.title 
+  .grid__item__menuBtn
+    =link_to edit_post_path(post.id) , class: 'grid__item__menuBtn__icon', method: :get do
+      %i.fa.fa-pen-square
