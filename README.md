@@ -36,7 +36,7 @@ https://railsguides.jp/active_storage_overview.html
 ・Ruby 2.6.6<br>
 ・Rails  5.2.3<br>
 ・Bundler 1.17.2<br>
-・psql (PostgreSQL) 12.3
+・mysql 5.6.47
 
 ## 課題や今後実装したい機能<br>
 ・カテゴリー、またはジャンル分け出来るようにする。<br>
