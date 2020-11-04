@@ -16,9 +16,12 @@
 .header__menu
   - if user_signed_in? 
     %ul.header__menu__icon
-      %li
-        = link_to destroy_user_session_path, method: :delete, class: 'header__menu__icon__user' do
-          %h3=current_user.nickname
+      %li.header__menu__icon__user
+        %span.pull-down-menu
+          %h3= current_user.nickname
+          %ul.user__info
+            %li.user__info__text
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
       %li
         = link_to new_post_path, class: 'header__menu__icon__video' do
           %i.fas.fa-plus-circle
