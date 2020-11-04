@@ -790,3 +790,242 @@
   INFO [b9412c7e] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/simpree/current/config/unicorn.rb -E deployment -D  as ec2-user@13.113.237.186
  DEBUG [b9412c7e] Command: cd /var/www/simpree/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/simpree/current/config/unicorn.rb -E deployment -D  )
  DEBUG [b9412c7e] 	master failed to start, check stderr log for details
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-11-04 09:20:01 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a2024375] Running [ -d $HOME/.rbenv/versions/2.6.6 ] as ec2-user@13.113.237.186
+ DEBUG [a2024375] Command: [ -d $HOME/.rbenv/versions/2.6.6 ]
+ DEBUG [a2024375] Finished in 0.298 seconds with exit status 0 (successful).
+  INFO [c37dae94] Running /usr/bin/env mkdir -p /tmp as ec2-user@13.113.237.186
+ DEBUG [c37dae94] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /tmp )
+  INFO [c37dae94] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-simpree-production-ago.sh 0.0%
+  INFO Uploading /tmp/git-ssh-simpree-production-ago.sh 100.0%
+  INFO [dc877c2a] Running /usr/bin/env chmod 700 /tmp/git-ssh-simpree-production-ago.sh as ec2-user@13.113.237.186
+ DEBUG [dc877c2a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env chmod 700 /tmp/git-ssh-simpree-production-ago.sh )
+  INFO [dc877c2a] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [46b26c3d] Running /usr/bin/env git ls-remote git@github.com:mitsu17/simpree.git HEAD as ec2-user@13.113.237.186
+ DEBUG [46b26c3d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-simpree-production-ago.sh" ; /usr/bin/env git ls-remote git@github.com:mitsu17/simpree.git HEAD )
+ DEBUG [46b26c3d] 	8862ad36b7e78d04e320a6ef17bc2f277541e053	HEAD
+  INFO [46b26c3d] Finished in 2.010 seconds with exit status 0 (successful).
+  INFO [c51af550] Running /usr/bin/env mkdir -p /var/www/simpree/shared /var/www/simpree/releases as ec2-user@13.113.237.186
+ DEBUG [c51af550] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /var/www/simpree/shared /var/www/simpree/releases )
+  INFO [c51af550] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [3a5db792] Running /usr/bin/env mkdir -p /var/www/simpree/shared/log /var/www/simpree/shared/tmp/pids /var/www/simpree/shared/tmp/cache /var/www/simpree/shared/tmp/sockets /var/www/simpree/shared/vendor/bundle /var/www/simpree/shared/public/system /var/www/simpree/shared/public/uploads /var/www/simpree/shared/public/assets as ec2-user@13.113.237.186
+ DEBUG [3a5db792] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /var/www/simpree/shared/log /var/www/simpree/shared/tmp/pids /var/www/simpree/shared/tmp/cache /var/www/simpree/shared/tmp/sockets /var/www/simpree/shared/vendor/bundle /var/www/simpree/shared/public/system /var/www/simpree/shared/public/uploads /var/www/simpree/shared/public/assets )
+  INFO [3a5db792] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [b4cba221] Running [ -f /var/www/simpree/current/REVISION ] as ec2-user@13.113.237.186
+ DEBUG [b4cba221] Command: [ -f /var/www/simpree/current/REVISION ]
+ DEBUG [b4cba221] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [af931eb3] Running /usr/bin/env cat /var/www/simpree/current/REVISION 2>/dev/null as ec2-user@13.113.237.186
+ DEBUG [af931eb3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env cat /var/www/simpree/current/REVISION 2>/dev/null )
+ DEBUG [af931eb3] 	2c6f0e8d80dac3451d7c9eebb05f6f5079d8ba15
+ DEBUG [af931eb3] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [b9b4f76d] Running [ -f /var/www/simpree/repo/HEAD ] as ec2-user@13.113.237.186
+ DEBUG [b9b4f76d] Command: [ -f /var/www/simpree/repo/HEAD ]
+ DEBUG [b9b4f76d] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/simpree/repo
+ DEBUG [4a518ec4] Running if test ! -d /var/www/simpree/repo; then echo "Directory does not exist '/var/www/simpree/repo'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [4a518ec4] Command: if test ! -d /var/www/simpree/repo; then echo "Directory does not exist '/var/www/simpree/repo'" 1>&2; false; fi
+ DEBUG [4a518ec4] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [c3c162bb] Running /usr/bin/env git remote set-url origin git@github.com:mitsu17/simpree.git as ec2-user@13.113.237.186
+ DEBUG [c3c162bb] Command: cd /var/www/simpree/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-simpree-production-ago.sh" ; /usr/bin/env git remote set-url origin git@github.com:mitsu17/simpree.git )
+  INFO [c3c162bb] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [cc1430da] Running /usr/bin/env git remote update --prune as ec2-user@13.113.237.186
+ DEBUG [cc1430da] Command: cd /var/www/simpree/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-simpree-production-ago.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cc1430da] 	Fetching origin
+ DEBUG [cc1430da] 	From github.com:mitsu17/simpree
+   2c6f0e8..8862ad3  master     -> master
+  INFO [cc1430da] Finished in 2.406 seconds with exit status 0 (successful).
+ DEBUG [3b050439] Running if test ! -d /var/www/simpree/repo; then echo "Directory does not exist '/var/www/simpree/repo'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [3b050439] Command: if test ! -d /var/www/simpree/repo; then echo "Directory does not exist '/var/www/simpree/repo'" 1>&2; false; fi
+ DEBUG [3b050439] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [4413c286] Running /usr/bin/env mkdir -p /var/www/simpree/releases/20201104002005 as ec2-user@13.113.237.186
+ DEBUG [4413c286] Command: cd /var/www/simpree/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-simpree-production-ago.sh" ; /usr/bin/env mkdir -p /var/www/simpree/releases/20201104002005 )
+  INFO [4413c286] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [2fee7062] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/simpree/releases/20201104002005 as ec2-user@13.113.237.186
+ DEBUG [2fee7062] Command: cd /var/www/simpree/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-simpree-production-ago.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/simpree/releases/20201104002005 )
+  INFO [2fee7062] Finished in 2.368 seconds with exit status 0 (successful).
+ DEBUG [c14d5b15] Running if test ! -d /var/www/simpree/repo; then echo "Directory does not exist '/var/www/simpree/repo'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [c14d5b15] Command: if test ! -d /var/www/simpree/repo; then echo "Directory does not exist '/var/www/simpree/repo'" 1>&2; false; fi
+ DEBUG [c14d5b15] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [bce2495e] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@13.113.237.186
+ DEBUG [bce2495e] Command: cd /var/www/simpree/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-simpree-production-ago.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [bce2495e] 	8862ad36b7e78d04e320a6ef17bc2f277541e053
+ DEBUG [bce2495e] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [135d34e3] Running if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [135d34e3] Command: if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi
+ DEBUG [135d34e3] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [8bf10521] Running /usr/bin/env echo "8862ad36b7e78d04e320a6ef17bc2f277541e053" > REVISION as ec2-user@13.113.237.186
+ DEBUG [8bf10521] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env echo "8862ad36b7e78d04e320a6ef17bc2f277541e053" > REVISION )
+  INFO [8bf10521] Finished in 0.195 seconds with exit status 0 (successful).
+  INFO [1c8e08d5] Running /usr/bin/env mkdir -p /var/www/simpree/releases/20201104002005 /var/www/simpree/releases/20201104002005/tmp /var/www/simpree/releases/20201104002005/vendor /var/www/simpree/releases/20201104002005/public as ec2-user@13.113.237.186
+ DEBUG [1c8e08d5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /var/www/simpree/releases/20201104002005 /var/www/simpree/releases/20201104002005/tmp /var/www/simpree/releases/20201104002005/vendor /var/www/simpree/releases/20201104002005/public )
+  INFO [1c8e08d5] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [001a23cd] Running [ -L /var/www/simpree/releases/20201104002005/log ] as ec2-user@13.113.237.186
+ DEBUG [001a23cd] Command: [ -L /var/www/simpree/releases/20201104002005/log ]
+ DEBUG [001a23cd] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [7b0db12d] Running [ -d /var/www/simpree/releases/20201104002005/log ] as ec2-user@13.113.237.186
+ DEBUG [7b0db12d] Command: [ -d /var/www/simpree/releases/20201104002005/log ]
+ DEBUG [7b0db12d] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [3d1397ee] Running /usr/bin/env rm -rf /var/www/simpree/releases/20201104002005/log as ec2-user@13.113.237.186
+ DEBUG [3d1397ee] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /var/www/simpree/releases/20201104002005/log )
+  INFO [3d1397ee] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [e60b127d] Running /usr/bin/env ln -s /var/www/simpree/shared/log /var/www/simpree/releases/20201104002005/log as ec2-user@13.113.237.186
+ DEBUG [e60b127d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/log /var/www/simpree/releases/20201104002005/log )
+  INFO [e60b127d] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [b48cd1b6] Running [ -L /var/www/simpree/releases/20201104002005/tmp/pids ] as ec2-user@13.113.237.186
+ DEBUG [b48cd1b6] Command: [ -L /var/www/simpree/releases/20201104002005/tmp/pids ]
+ DEBUG [b48cd1b6] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [a30fbad9] Running [ -d /var/www/simpree/releases/20201104002005/tmp/pids ] as ec2-user@13.113.237.186
+ DEBUG [a30fbad9] Command: [ -d /var/www/simpree/releases/20201104002005/tmp/pids ]
+ DEBUG [a30fbad9] Finished in 0.092 seconds with exit status 1 (failed).
+  INFO [e101d6b7] Running /usr/bin/env ln -s /var/www/simpree/shared/tmp/pids /var/www/simpree/releases/20201104002005/tmp/pids as ec2-user@13.113.237.186
+ DEBUG [e101d6b7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/tmp/pids /var/www/simpree/releases/20201104002005/tmp/pids )
+  INFO [e101d6b7] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [a60def20] Running [ -L /var/www/simpree/releases/20201104002005/tmp/cache ] as ec2-user@13.113.237.186
+ DEBUG [a60def20] Command: [ -L /var/www/simpree/releases/20201104002005/tmp/cache ]
+ DEBUG [a60def20] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [12f5c68d] Running [ -d /var/www/simpree/releases/20201104002005/tmp/cache ] as ec2-user@13.113.237.186
+ DEBUG [12f5c68d] Command: [ -d /var/www/simpree/releases/20201104002005/tmp/cache ]
+ DEBUG [12f5c68d] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [02a2a2e5] Running /usr/bin/env rm -rf /var/www/simpree/releases/20201104002005/tmp/cache as ec2-user@13.113.237.186
+ DEBUG [02a2a2e5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env rm -rf /var/www/simpree/releases/20201104002005/tmp/cache )
+  INFO [02a2a2e5] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [9f634132] Running /usr/bin/env ln -s /var/www/simpree/shared/tmp/cache /var/www/simpree/releases/20201104002005/tmp/cache as ec2-user@13.113.237.186
+ DEBUG [9f634132] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/tmp/cache /var/www/simpree/releases/20201104002005/tmp/cache )
+  INFO [9f634132] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [c220df5e] Running [ -L /var/www/simpree/releases/20201104002005/tmp/sockets ] as ec2-user@13.113.237.186
+ DEBUG [c220df5e] Command: [ -L /var/www/simpree/releases/20201104002005/tmp/sockets ]
+ DEBUG [c220df5e] Finished in 0.094 seconds with exit status 1 (failed).
+ DEBUG [d2059edc] Running [ -d /var/www/simpree/releases/20201104002005/tmp/sockets ] as ec2-user@13.113.237.186
+ DEBUG [d2059edc] Command: [ -d /var/www/simpree/releases/20201104002005/tmp/sockets ]
+ DEBUG [d2059edc] Finished in 0.091 seconds with exit status 1 (failed).
+  INFO [2d283940] Running /usr/bin/env ln -s /var/www/simpree/shared/tmp/sockets /var/www/simpree/releases/20201104002005/tmp/sockets as ec2-user@13.113.237.186
+ DEBUG [2d283940] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/tmp/sockets /var/www/simpree/releases/20201104002005/tmp/sockets )
+  INFO [2d283940] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [47d107db] Running [ -L /var/www/simpree/releases/20201104002005/vendor/bundle ] as ec2-user@13.113.237.186
+ DEBUG [47d107db] Command: [ -L /var/www/simpree/releases/20201104002005/vendor/bundle ]
+ DEBUG [47d107db] Finished in 0.083 seconds with exit status 1 (failed).
+ DEBUG [69727224] Running [ -d /var/www/simpree/releases/20201104002005/vendor/bundle ] as ec2-user@13.113.237.186
+ DEBUG [69727224] Command: [ -d /var/www/simpree/releases/20201104002005/vendor/bundle ]
+ DEBUG [69727224] Finished in 0.092 seconds with exit status 1 (failed).
+  INFO [87abf7a0] Running /usr/bin/env ln -s /var/www/simpree/shared/vendor/bundle /var/www/simpree/releases/20201104002005/vendor/bundle as ec2-user@13.113.237.186
+ DEBUG [87abf7a0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/vendor/bundle /var/www/simpree/releases/20201104002005/vendor/bundle )
+  INFO [87abf7a0] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [1bf5dee3] Running [ -L /var/www/simpree/releases/20201104002005/public/system ] as ec2-user@13.113.237.186
+ DEBUG [1bf5dee3] Command: [ -L /var/www/simpree/releases/20201104002005/public/system ]
+ DEBUG [1bf5dee3] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [cb9a693e] Running [ -d /var/www/simpree/releases/20201104002005/public/system ] as ec2-user@13.113.237.186
+ DEBUG [cb9a693e] Command: [ -d /var/www/simpree/releases/20201104002005/public/system ]
+ DEBUG [cb9a693e] Finished in 0.095 seconds with exit status 1 (failed).
+  INFO [3b10029e] Running /usr/bin/env ln -s /var/www/simpree/shared/public/system /var/www/simpree/releases/20201104002005/public/system as ec2-user@13.113.237.186
+ DEBUG [3b10029e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/public/system /var/www/simpree/releases/20201104002005/public/system )
+  INFO [3b10029e] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [8db4ca00] Running [ -L /var/www/simpree/releases/20201104002005/public/uploads ] as ec2-user@13.113.237.186
+ DEBUG [8db4ca00] Command: [ -L /var/www/simpree/releases/20201104002005/public/uploads ]
+ DEBUG [8db4ca00] Finished in 0.094 seconds with exit status 1 (failed).
+ DEBUG [db4776b8] Running [ -d /var/www/simpree/releases/20201104002005/public/uploads ] as ec2-user@13.113.237.186
+ DEBUG [db4776b8] Command: [ -d /var/www/simpree/releases/20201104002005/public/uploads ]
+ DEBUG [db4776b8] Finished in 0.096 seconds with exit status 1 (failed).
+  INFO [2e4ea0d6] Running /usr/bin/env ln -s /var/www/simpree/shared/public/uploads /var/www/simpree/releases/20201104002005/public/uploads as ec2-user@13.113.237.186
+ DEBUG [2e4ea0d6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/public/uploads /var/www/simpree/releases/20201104002005/public/uploads )
+  INFO [2e4ea0d6] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [931d7831] Running [ -L /var/www/simpree/releases/20201104002005/public/assets ] as ec2-user@13.113.237.186
+ DEBUG [931d7831] Command: [ -L /var/www/simpree/releases/20201104002005/public/assets ]
+ DEBUG [931d7831] Finished in 0.094 seconds with exit status 1 (failed).
+ DEBUG [e896b21f] Running [ -d /var/www/simpree/releases/20201104002005/public/assets ] as ec2-user@13.113.237.186
+ DEBUG [e896b21f] Command: [ -d /var/www/simpree/releases/20201104002005/public/assets ]
+ DEBUG [e896b21f] Finished in 0.091 seconds with exit status 1 (failed).
+  INFO [faaf86a9] Running /usr/bin/env ln -s /var/www/simpree/shared/public/assets /var/www/simpree/releases/20201104002005/public/assets as ec2-user@13.113.237.186
+ DEBUG [faaf86a9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/shared/public/assets /var/www/simpree/releases/20201104002005/public/assets )
+  INFO [faaf86a9] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [7923f980] Running if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [7923f980] Command: if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi
+ DEBUG [7923f980] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [bdc742e8] Running $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true as ec2-user@13.113.237.186
+ DEBUG [bdc742e8] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; $HOME/.rbenv/bin/rbenv exec bundle config --local deployment true )
+ DEBUG [bdc742e8] 	You are replacing the current local value of deployment, which is currently nil
+  INFO [bdc742e8] Finished in 0.334 seconds with exit status 0 (successful).
+  INFO [eaecdac7] Running $HOME/.rbenv/bin/rbenv exec bundle config --local path /var/www/simpree/shared/bundle as ec2-user@13.113.237.186
+ DEBUG [eaecdac7] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; $HOME/.rbenv/bin/rbenv exec bundle config --local path /var/www/simpree/shared/bundle )
+ DEBUG [eaecdac7] 	You are replacing the current local value of path, which is currently nil
+  INFO [eaecdac7] Finished in 0.409 seconds with exit status 0 (successful).
+  INFO [5ec1f422] Running $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test as ec2-user@13.113.237.186
+ DEBUG [5ec1f422] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; $HOME/.rbenv/bin/rbenv exec bundle config --local without development:test )
+ DEBUG [5ec1f422] 	You are replacing the current local value of without, which is currently nil
+  INFO [5ec1f422] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [5c850371] Running if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [5c850371] Command: if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi
+ DEBUG [5c850371] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [5412020f] Running $HOME/.rbenv/bin/rbenv exec bundle check as ec2-user@13.113.237.186
+ DEBUG [5412020f] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; $HOME/.rbenv/bin/rbenv exec bundle check )
+ DEBUG [5412020f] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [5412020f] 	The Gemfile's dependencies are satisfied
+ DEBUG [5412020f] Finished in 0.418 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [ba2042ca] Running if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [ba2042ca] Command: if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi
+ DEBUG [ba2042ca] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [693b1ab5] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@13.113.237.186
+ DEBUG [693b1ab5] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [693b1ab5] 	Yarn executable was not detected in the system.
+ DEBUG [693b1ab5] 	Download Yarn at https://yarnpkg.com/en/docs/install
+  INFO [693b1ab5] Finished in 1.831 seconds with exit status 0 (successful).
+ DEBUG [2c12feec] Running if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [2c12feec] Command: if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi
+ DEBUG [2c12feec] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [fa70c7cd] Running /usr/bin/env mkdir -p /var/www/simpree/releases/20201104002005/assets_manifest_backup as ec2-user@13.113.237.186
+ DEBUG [fa70c7cd] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mkdir -p /var/www/simpree/releases/20201104002005/assets_manifest_backup )
+  INFO [fa70c7cd] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [3acbd9b3] Running /usr/bin/env ls /var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest* as ec2-user@13.113.237.186
+ DEBUG [3acbd9b3] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ls /var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest* )
+ DEBUG [3acbd9b3] 	/var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest-ae9d939180f27cabf3ad55e11b8c4dcd.json
+ DEBUG [3acbd9b3] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [edf35dcd] Running /usr/bin/env ls /var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest* as ec2-user@13.113.237.186
+ DEBUG [edf35dcd] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ls /var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest* )
+ DEBUG [edf35dcd] 	/var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest-ae9d939180f27cabf3ad55e11b8c4dcd.json
+ DEBUG [edf35dcd] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [2b449ec2] Running /usr/bin/env cp /var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest-ae9d939180f27cabf3ad55e11b8c4dcd.json /var/www/simpree/releases/20201104002005/assets_manifest_backup as ec2-user@13.113.237.186
+ DEBUG [2b449ec2] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env cp /var/www/simpree/releases/20201104002005/public/assets/.sprockets-manifest-ae9d939180f27cabf3ad55e11b8c4dcd.json /var/www/simpree/releases/20201104002005/assets_manifest_backup )
+  INFO [2b449ec2] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [c7b43c05] Running if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [c7b43c05] Command: if test ! -d /var/www/simpree/releases/20201104002005; then echo "Directory does not exist '/var/www/simpree/releases/20201104002005'" 1>&2; false; fi
+ DEBUG [c7b43c05] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [a2771829] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@13.113.237.186
+ DEBUG [a2771829] Command: cd /var/www/simpree/releases/20201104002005 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [a2771829] Finished in 1.291 seconds with exit status 0 (successful).
+  INFO [92288361] Running /usr/bin/env ln -s /var/www/simpree/releases/20201104002005 /var/www/simpree/releases/current as ec2-user@13.113.237.186
+ DEBUG [92288361] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ln -s /var/www/simpree/releases/20201104002005 /var/www/simpree/releases/current )
+  INFO [92288361] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [f73812bc] Running /usr/bin/env mv /var/www/simpree/releases/current /var/www/simpree as ec2-user@13.113.237.186
+ DEBUG [f73812bc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env mv /var/www/simpree/releases/current /var/www/simpree )
+  INFO [f73812bc] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [b2ba354a] Running if test ! -d /var/www/simpree/current; then echo "Directory does not exist '/var/www/simpree/current'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [b2ba354a] Command: if test ! -d /var/www/simpree/current; then echo "Directory does not exist '/var/www/simpree/current'" 1>&2; false; fi
+ DEBUG [b2ba354a] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [650a557a] Running [ -e /var/www/simpree/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/simpree/shared/tmp/pids/unicorn.pid` as ec2-user@13.113.237.186
+ DEBUG [650a557a] Command: [ -e /var/www/simpree/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/simpree/shared/tmp/pids/unicorn.pid`
+ DEBUG [650a557a] 	bash: 0 行: kill: (13196) - そのようなプロセスはありません
+ DEBUG [650a557a] Finished in 0.099 seconds with exit status 1 (failed).
+  INFO [e3888b42] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/simpree/current/config/unicorn.rb -E deployment -D  as ec2-user@13.113.237.186
+ DEBUG [e3888b42] Command: cd /var/www/simpree/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/simpree/current/config/unicorn.rb -E deployment -D  )
+  INFO [e3888b42] Finished in 2.891 seconds with exit status 0 (successful).
+ DEBUG [60fdb4fc] Running if test ! -d /var/www/simpree/current; then echo "Directory does not exist '/var/www/simpree/current'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [60fdb4fc] Command: if test ! -d /var/www/simpree/current; then echo "Directory does not exist '/var/www/simpree/current'" 1>&2; false; fi
+ DEBUG [60fdb4fc] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [3dbeafef] Running /usr/bin/env kill -s USR2 `cat /var/www/simpree/shared/tmp/pids/unicorn.pid` as ec2-user@13.113.237.186
+ DEBUG [3dbeafef] Command: cd /var/www/simpree/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env kill -s USR2 `cat /var/www/simpree/shared/tmp/pids/unicorn.pid` )
+  INFO [3dbeafef] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [cec530df] Running /usr/bin/env ls -x /var/www/simpree/releases as ec2-user@13.113.237.186
+ DEBUG [cec530df] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env ls -x /var/www/simpree/releases )
+ DEBUG [cec530df] 	20201103190802	20201103193917	20201104001842	20201104002005
+ DEBUG [cec530df] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [f73d815f] Running if test ! -d /var/www/simpree/releases; then echo "Directory does not exist '/var/www/simpree/releases'" 1>&2; false; fi as ec2-user@13.113.237.186
+ DEBUG [f73d815f] Command: if test ! -d /var/www/simpree/releases; then echo "Directory does not exist '/var/www/simpree/releases'" 1>&2; false; fi
+ DEBUG [f73d815f] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [6bb5dcb3] Running /usr/bin/env echo "Branch master (at 8862ad36b7e78d04e320a6ef17bc2f277541e053) deployed as release 20201104002005 by ago" >> /var/www/simpree/revisions.log as ec2-user@13.113.237.186
+ DEBUG [6bb5dcb3] Command: cd /var/www/simpree/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.6.6" ; /usr/bin/env echo "Branch master (at 8862ad36b7e78d04e320a6ef17bc2f277541e053) deployed as release 20201104002005 by ago" >> /var/www/simpree/revisions.log )
+  INFO [6bb5dcb3] Finished in 0.131 seconds with exit status 0 (successful).
